@@ -1,0 +1,39 @@
+/*`<person
+class="person-card">
+    <header class="person-header">
+        <h2>${famousPeople[famousPerson].name}</h2>
+        <h3>${famousPeople[famousPerson].title}</h3>
+    </header>
+    <section class="person-info">
+        <p>${famousPeople[famousPerson].bio}</p>
+        <img src="${famousPeople[famousPerson].image}" class="pic" alt="${famousPeople[famousPerson].name}">
+    </section>
+    <footer class="lifespan">
+        <p>${famousPeople[famousPerson].lifespan.birth} - ${famousPeople[famousPerson].lifespan.death}</p>
+    </footer>
+</person>`;*/
+#userInput {
+    display: block;
+}
+
+/*#main-content{
+    width: 95%;
+    margin: auto;
+}*/
+
+.person-card {
+    display: inline-block;
+    background-color: #A6E560;
+    width: 20%;
+    padding: 2%;
+    margin: 2%;
+}
+
+.pic {
+    width: 200px;
+    height: 200px;
+}
+
+.clear {
+    clear: both;
+}
