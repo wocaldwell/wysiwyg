@@ -36,29 +36,33 @@ const famousPeople = [
     }
 ];
 
-//get div
+// Fill main container
 const mainContainer = document.getElementById("main-container");
 
-//iterate
 for (let famousPerson in famousPeople) {
+    let card =
+    `<person class="person-card" id="famous-person--${famousPerson}">
+        <header class="person-header">
+            <h2>${famousPeople[famousPerson].name}</h2>
+            <h3>${famousPeople[famousPerson].title}</h3>
+        </header>
+        <section class="person-info">
+            <p>${famousPeople[famousPerson].bio}</p>
+            <img src="${famousPeople[famousPerson].image}" class="pic" alt="${famousPeople[famousPerson].name}">
+        </section>
+        <footer class="lifespan">
+            <p>${famousPeople[famousPerson].lifespan.birth} - ${famousPeople[famousPerson].lifespan.death}</p>
+        </footer>
+    </person>`;
+    mainContainer.innerHTML += card;
+};
 
-//get keys and access values
-//and build up the string all at once
-
-let card =
-`<person class="person-card">
-    <header class="person-header">
-        <h2>${famousPeople[famousPerson].name}</h2>
-        <h3>${famousPeople[famousPerson].title}</h3>
-    </header>
-    <section class="person-info">
-        <p>${famousPeople[famousPerson].bio}</p>
-        <img src="${famousPeople[famousPerson].image}" class="pic" alt="${famousPeople[famousPerson].name}">
-    </section>
-    <footer class="lifespan">
-        <p>${famousPeople[famousPerson].lifespan.birth} - ${famousPeople[famousPerson].lifespan.death}</p>
-    </footer>
-</person>`;
-//put it in the div
-mainContainer.innerHTML += card;
+// change card background color based on position
+peopleCards = mainContainer.children;
+for (var i = 0; i < peopleCards.length; i++) {
+    if (i % 2 === 0) {
+        peopleCards[i].classList.add("yellow");
+    } else {
+        peopleCards[i].classList.add("blue");
+    }
 };

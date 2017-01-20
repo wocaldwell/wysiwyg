@@ -23,7 +23,7 @@ class="person-card">
 
 .person-card {
     display: inline-block;
-    background-color: #A6E560;
+    /*background-color: #A6E560;*/
     width: 20%;
     padding: 2%;
     margin: 2%;
@@ -36,4 +36,12 @@ class="person-card">
 
 .clear {
     clear: both;
+}
+
+.blue {
+    background-color: #9AC3E5;
+}
+
+.yellow {
+    background-color: #E5E58C;
 }
