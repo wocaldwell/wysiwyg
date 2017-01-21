@@ -1,17 +1,4 @@
-/*`<person
-class="person-card">
-    <header class="person-header">
-        <h2>${famousPeople[famousPerson].name}</h2>
-        <h3>${famousPeople[famousPerson].title}</h3>
-    </header>
-    <section class="person-info">
-        <p>${famousPeople[famousPerson].bio}</p>
-        <img src="${famousPeople[famousPerson].image}" class="pic" alt="${famousPeople[famousPerson].name}">
-    </section>
-    <footer class="lifespan">
-        <p>${famousPeople[famousPerson].lifespan.birth} - ${famousPeople[famousPerson].lifespan.death}</p>
-    </footer>
-</person>`;*/
+
 #userInput {
     display: block;
 }
@@ -44,4 +31,13 @@ class="person-card">
 
 .yellow {
     background-color: #E5E58C;
+}
+
+.border {
+    border:3px dotted #161FE5;
+}
+
+textarea {
+
+    width: 50%;
 }

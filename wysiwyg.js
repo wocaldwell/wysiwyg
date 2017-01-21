@@ -1,4 +1,4 @@
-const famousPeople = [
+var famousPeople = [
     {
         title: "Samurai",
         name: "Tomoe Gozen",
@@ -37,10 +37,10 @@ const famousPeople = [
 ];
 
 // Fill main container
-const mainContainer = document.getElementById("main-container");
+var mainContainer = document.getElementById("main-container");
 
-for (let famousPerson in famousPeople) {
-    let card =
+for (var famousPerson in famousPeople) {
+    var card =
     `<person class="person-card" id="famous-person--${famousPerson}">
         <header class="person-header">
             <h2>${famousPeople[famousPerson].name}</h2>
@@ -58,7 +58,7 @@ for (let famousPerson in famousPeople) {
 };
 
 // change card background color based on position
-peopleCards = mainContainer.children;
+var peopleCards = mainContainer.children;
 for (var i = 0; i < peopleCards.length; i++) {
     if (i % 2 === 0) {
         peopleCards[i].classList.add("yellow");
@@ -66,3 +66,50 @@ for (var i = 0; i < peopleCards.length; i++) {
         peopleCards[i].classList.add("blue");
     }
 };
+
+// click card event listeners
+for (var i = 0; i < peopleCards.length; i++) {
+    peopleCards[i].addEventListener('click', function() {
+        focusInput();
+        addBorder();
+    });
+};
+
+function focusInput() {
+    document.getElementById("user-input").focus();
+}
+
+function addBorder() {
+    event.currentTarget.classList.add("border");
+}
+
+// change text event listener
+var userInputField = document.getElementById("user-input");
+var personCards = document.getElementsByTagName("person");
+userInputField.addEventListener('keyup', changeBio);
+
+// Doesn't work
+function changeBio() {
+    console.log(personCards);
+    if (personCards.classList.contains("border")) {
+        var personInfoSection = personCards.childNodes[1];
+        personInfoSection.childNodes[0].innerHTML = newBio;
+    }
+}
+
+// Clear text field when enter is pressed
+userInputField.onkeypress=function(e) {
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        userInputField.value = "";
+    }
+}
+
+
+
+
+
+
+
+
+
